@@ -1,6 +1,4 @@
 rquerystring
 ============
 
-a
-b
-c
+A query string generator and parser gem
