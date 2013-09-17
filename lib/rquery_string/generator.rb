@@ -5,7 +5,11 @@ module RqueryString
     def self.build_query_string(hash_para)
       query_string = ""
       hash_para.each do |key, value|
-        query_string << (send "build_#{value.class.to_s.downcase}_type".to_sym, CGI::escape(key), value) << "&"
+        begin
+          query_string << (send "build_#{value.class.to_s.downcase}_type".to_sym, CGI::escape(key.to_s), value) << "&"
+        rescue NoMethodError => e
+          query_string << "#{key}=#{value}&"
+        end
       end
       return query_string[0..query_string.length - 2]
     end
@@ -24,10 +28,6 @@ module RqueryString
     def self.build_string_type(key, value)
       str_value = "'" + value + "'"
       "#{key}=#{CGI::escape(str_value)}"
-    end
-
-    def self.build_fixnum_type(key, value)
-      "#{key}=#{value}"
     end
 
     def self.build_array_type(key, value)
