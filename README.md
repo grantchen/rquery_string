@@ -18,6 +18,7 @@ gem 'rquery_string'
 ##Usage
 
 ```ruby
+require 'rquery_string'
 
 RqueryString.build({:a => 1, "b" => "2", :c => 2.5})
 => "a=1&%27b%27=%272%27&c=2.5"
@@ -30,5 +31,4 @@ RqueryString.build({:a => [1,2,3], :b => "1"})
 
 RqueryString.parse("a[]=1&a[]=2&a[]=3&b=%271%27")  
 => {:a=>[1, 2, 3], :b=>"1"}
-
 ```
