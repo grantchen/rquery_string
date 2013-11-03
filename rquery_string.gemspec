@@ -10,4 +10,6 @@ Gem::Specification.new do |s|
   s.files         = Dir['lib/**/*.rb'] + Dir['*.rb']
   s.homepage    =
     'https://github.com/grantchen/rquery_string'
+
+  s.add_development_dependency 'rspec', '~> 2.14.1'
 end
