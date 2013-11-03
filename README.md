@@ -12,7 +12,7 @@ $ gem install rquery_string
 Or with Bundler in your Gemfile.
 
 ```
-gem 'google_play_search'
+gem 'rquery_string'
 ```
 
 ##Usage
