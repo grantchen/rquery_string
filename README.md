@@ -1,7 +1,7 @@
 rquerystring
 ============
 
-A hash to query string generator and query string to hash parser gem
+A hash to url query string generator and url query string to hash parser gem
 
 
 ##Installation
