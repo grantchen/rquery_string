@@ -31,5 +31,4 @@ RqueryString.build({:a => [1,2,3], :b => "1"})
 RqueryString.parse("a[]=1&a[]=2&a[]=3&b=%271%27")  
 => {:a=>[1, 2, 3], :b=>"1"}
 
-
 ```
