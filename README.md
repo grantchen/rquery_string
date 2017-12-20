@@ -4,7 +4,7 @@ rquerystring
 A hash to url query string generator and url query string to hash parser gem
 
 
-##Installation
+## Installation
 
 ```bash
 $ gem install rquery_string
@@ -15,7 +15,7 @@ Or with Bundler in your Gemfile.
 gem 'rquery_string'
 ```
 
-##Usage
+## Usage
 
 ```ruby
 require 'rquery_string'
