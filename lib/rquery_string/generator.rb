@@ -7,7 +7,7 @@ module RqueryString
       hash_para.each do |key, value|
         begin
           query_string << (send "build_#{value.class.to_s.downcase}_type".to_sym, escape_key(key), value) << "&"
-        rescue NoMethodError => e
+        rescue NoMethodError =>
           query_string << "#{escape_key(key)}=#{value}&"
         end
       end
@@ -23,7 +23,7 @@ module RqueryString
         begin
           query_string << (send "build_#{value.class.to_s.downcase}_type".to_sym,
                          "#{new_key}", value) << "&"
-        rescue NoMethodError => e
+        rescue NoMethodError =>
           query_string << "#{new_key}=#{value}&"
         end
       end
@@ -41,7 +41,7 @@ module RqueryString
         begin
           query_string << (send "build_#{value[index].class.to_s.downcase}_type".to_sym,
                          "#{key}[]", value[index]) << "&"
-        rescue NoMethodError => e
+        rescue NoMethodError =>
           query_string << "#{key}[]=#{value[index]}&"
         end
       end
