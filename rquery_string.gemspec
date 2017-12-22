@@ -5,7 +5,8 @@ Gem::Specification.new do |s|
   s.summary     = "query string generator and parser"
   s.description = "query string generator and parser gem"
   s.authors     = ["Grant Chen"]
-  s.email       = 'kucss@hotmail.com'
+  s.email       = 'grantcss1982@gmail.com'
+  s.license     = 'MIT'
 
   s.files         = Dir['lib/**/*.rb'] + Dir['*.rb']
   s.homepage    =
